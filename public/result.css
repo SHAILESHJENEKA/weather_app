@@ -1,0 +1,111 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	color: white;
+}
+
+header
+{
+	background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("background.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	height: 100vh;
+
+}
+
+body
+{
+	
+	font-size: 15px;
+	overflow-x: hidden;
+	color: white;
+	font-family: 'Roboto Slab', serif;
+}
+
+h1
+{
+	text-align: center;
+	padding: 20px;
+	font-size: 50px;
+	letter-spacing: 10px;
+	word-spacing: 15px;
+	text-shadow: 2px 2px 2px  rgba(30, 163, 203, 0.87);
+	background-color: black;
+}
+
+h2
+{
+	color: #39cccc;
+	border-bottom: 2px solid red;
+	width: 650px;
+}
+
+#current
+{
+
+    line-height: 1.6;
+	padding-top: 40px;
+	padding-left: 50px;
+	letter-spacing: 3px;
+	word-spacing: 4px;
+	font-size: 23px;
+	width: 700px;
+	float: left;
+    text-shadow: 2px 2px 2px rgba(36, 39, 18, 0.87);
+
+}
+
+#hourly
+{
+	line-height: 1.6;
+	padding-top: 40px;
+	padding-left: 50px;
+	letter-spacing: 3px;
+	font-size: 23px;
+	width: 800px;
+	float: right;
+    text-shadow: 2px 2px 2px rgba(36, 39, 18, 0.87);
+	
+}
+
+#daily
+{
+	line-height: 1.6;
+	padding-top: 320px;
+	padding-left: 500px;
+	letter-spacing: 3px;
+	font-size: 23px;
+	float: bottom;
+    text-shadow: 2px 2px 2px rgba(36, 39, 18, 0.87);
+
+}
+
+a
+{
+	color: black;
+	text-align: center;
+}
+
+#button
+{
+	background-color: #3D9970;
+	font-size: 15px;
+	border-radius: 10px;
+	padding: 10px;
+	margin-left:  680px;
+    margin-top: 50px;
+	text-align: center;
+}
+
+#data
+{
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 2px  rgba(30, 163, 203, 0.87);
+}

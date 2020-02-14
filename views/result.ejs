@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RESULTS</title>
+	<link rel="stylesheet" type="text/css" href="result.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+<header>
+
+<h1> WEATHER CONDITION </h1>
+
+
+
+<hr id="hr">
+
+<div id="data"></div>
+
+<script language="JavaScript">
+
+	function processForm()
+	  {
+	  	var parameter = location.search.substring(1).split("&");
+	  	var temp =  parameter[0].split("=");
+	  	l = unescape(temp[1]);
+	  	document.getElementById("data").innerHTML = l; 
+	  }
+	  processForm();
+
+</script>
+
+<div id="current">
+<ul>
+
+
+
+<h2>CURRENT WEATHER CONDITION</h2>	
+
+
+
+<label><strong> TIMEZONE            = </strong> </label><%= data1['timezone'] %>
+<br>
+<label><strong> CURRENT STATUS      = </strong> </label> <%= data1['currently']['icon'] %>
+<br>
+<label><strong> CURRENT TEMPERATURE = </strong> </label> <% var temp = data1['currently']['temperature'] - 32%>
+<% var temp1 = temp*0.55 %> <% var temp2 = temp1.toFixed(2) %> <%= temp2 %>  <label> °C</label> 
+<br>
+<label><strong> CURRENT WINDSPEED   = </strong> </label> <%= data1['currently']['windSpeed'] %><label> mph</label>
+<br>
+<label><strong> CURRENT HUMIDITY    = </strong> </label> <%= data1['currently']['humidity'] %><label> /1 </label>
+<br>
+<label><strong> PRESSURE            = </strong> </label> <%= data1['currently']['pressure'] %><label> mb </label>
+
+</ul>
+</div>
+
+<div id="hourly">
+<ul>
+
+<h2>HOURLY WEATHER CONDITION</h2>	
+
+<label><strong> HOURLY SUMMARY = </strong> </label> <%= data1['hourly']['summary'] %>
+<br>
+
+</ul>
+</div>
+
+<div id="daily">
+<ul>
+
+<h2>DAILY WEATHER CONDITION</h2>	
+
+<label><strong> DAILY SUMMARY = </strong> </label> <%= data1['daily']['summary'] %>
+<br>
+
+</ul>
+</div>
+
+<br>
+<button id="button"><a href="/">SEARCH AGAIN!! </a></button>
+
+</header>
+
+</body>
+</html>
